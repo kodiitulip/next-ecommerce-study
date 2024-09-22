@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import { Footer, Navbar } from '@/components/layout';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -9,6 +10,15 @@ export const metadata: Metadata = {
 	},
 };
 
+/**
+ * The root layout of the app, which wraps the entire app with
+ * the navbar and footer.
+ *
+ * This layout is shared by all pages.
+ *
+ * @param children The children elements to render inside the layout.
+ * @returns A JSX element representing the root layout.
+ */
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -16,7 +26,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<Navbar />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }

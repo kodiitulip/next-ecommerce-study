@@ -15,6 +15,9 @@ const config: Config = {
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 			},
+			boxShadow: {
+				popup: '0 3px 10px rgba(0, 0, 0, 0.2)',
+			},
 		},
 	},
 	plugins: [],
